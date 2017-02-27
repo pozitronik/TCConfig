@@ -1,0 +1,358 @@
+;DShell menu 4 TC 7.5b2
+
+POPUP "&Файлы"
+    MENUITEM "&Запуск файла под курсором\tEnter", $3E9
+    MENUITEM "Запуск прогр&аммы от имени...\tCtrl+Alt+Enter", $AF0
+    MENUITEM "&Открыть с помощью...\tWin+Enter", $1FB
+    MENUITEM SEPARATOR
+    MENUITEM "&Изменить атрибуты...\tAlt+A", $1F6
+    MENUITEM "Показать диалог сво&йств", $3EB
+    MENUITEM "&Комментарии к файлу...\tCtrl+Z", $A8C
+    MENUITEM "Подсчитать занимаемое &место\tCtrl+L", $1F7
+    MENUITEM "Показать контекстное мен&ю\tShift+F10", $9C4
+    MENUITEM SEPARATOR
+    MENUITEM "Сравнить ката&логи\tShift+F2", $215
+    MENUITEM "Сравнить с &учётом подкаталогов\tAlt+Shift+F2", $218
+    MENUITEM "Отметить &новые, скрыть одинаковые", $216
+    MENUITEM SEPARATOR
+    MENUITEM "Копировать файлы\tF5", $389
+    MENUITEM "Копировать в ту же панель\tShift+F5", $C1C
+    MENUITEM "Переместить\tF6", $3ED
+    MENUITEM "Переименовать\tF2, Shift+F6", $3EA
+    MENUITEM "Переименовать файл/каталог под курсором\tCtrlt+F6", $3EF
+    MENUITEM "Создать каталог\tF7", $38B
+    MENUITEM "Удалить файлы\tF8", $38C
+    MENUITEM SEPARATOR
+    MENUITEM "Создать &ярлык...\tCtrl+Shift+F5", $3EC
+    MENUITEM "Создать символическую ссылку...\tAlt+Ctrl+F5", em_SymLink
+    MENUITEM SEPARATOR
+    MENUITEM "Упаковать...\tAlt+F5", $1FC
+    MENUITEM "&Распаковать...\tAlt+F9", $1FD
+    MENUITEM "Прот&естировать архив(ы)\tAlt+Shift+F9", $206
+    MENUITEM SEPARATOR
+    MENUITEM "Разби&ть файл...", $230
+    MENUITEM "Со&брать файлы...", $231
+    MENUITEM "Кодироват&ь (MIME, UUE, XXE)...", $232
+    MENUITEM "&Декодировать (MIME, UUE, XXE, BinHex)...\tShift+Z", $233
+    MENUITEM "По&считать CRC-суммы (формат SFV, MD5)...", $234
+    MENUITEM "Про&верить CRC-суммы (из файлов SFV, MD5)", $235
+    MENUITEM SEPARATOR
+    POPUP "Пе&чать"
+        MENUITEM "&Список файлов...", $7EB
+        MENUITEM "Список файлов с &подкаталогами...", $7EC
+        MENUITEM "&Файл (содержимое, ассоциированной программой)", $1F8
+    END_POPUP
+    MENUITEM SEPARATOR
+    MENUITEM "В&ыход\tAlt+F4", $5F14
+END_POPUP
+
+POPUP "&Выделение"
+    MENUITEM "&Копировать выбранные файлы в буфер\tCtrl+C", $7D8
+    MENUITEM "Выре&зать выбранные файлы в буфер\tCtrl+X", $7D7
+    MENUITEM "Вс&тавить из буфера в текущий каталог\tCtrl+V", $7D9
+    MENUITEM SEPARATOR
+    MENUITEM "Вы&делить всё\tCtrl+A, Alt+A", $20B
+    MENUITEM "Убрать выделе&ние\tCtrl+Num -", $20C
+    MENUITEM "&Инвертировать выделение\tNum *", $20D
+    MENUITEM "Выде&лить группу...\tNum +", $209
+    MENUITEM "Снять выделение &группы...\tNum -", $20A
+    MENUITEM "Выделить все файлы по текущему имени\tShift+Num +", $21D
+    MENUITEM "Снять выделение по текущему имени\tShift+Num -", $21E
+    MENUITEM "&Выделить файлы по расширению\tAlt+Num +", $20F
+    MENUITEM "&Снять выделение по расширению\tAlt+Num -", $210
+    MENUITEM "Выделить все файлы по текущему имени+расширению", $21F
+    MENUITEM "Снять выделение по текущему имени+расширению", $220
+    POPUP "В&ыделить группу (файлы/папки)"
+        MENUITEM "Файлы &и папки", $CEF
+        MENUITEM "Только &файлы", $CF0
+        MENUITEM "Только &папки", $CF1
+    END_POPUP
+    POPUP "Снят&ь выделение группы (файлы/папки)"
+        MENUITEM "Только &файлы", $CF2
+        MENUITEM "Только &папки", $CF3
+        MENUITEM "Файлы или &всё – как настроено", $CF4
+    END_POPUP
+    POPUP "Выд&елить всё (файлы/папки)"
+        MENUITEM "Файлы &и папки", $CE5
+        MENUITEM "Только &файлы\tCtrl+Shift+Num +", $CE6
+        MENUITEM "Только &папки", $CE7
+    END_POPUP
+    POPUP "Снять всё выделение (фа&йлы/папки)"
+        MENUITEM "Только &файлы\tCtrl+Shift+Num -", $CE8
+        MENUITEM "Только &папки", $CE9
+        MENUITEM "Файлы или &всё – как настроено", $CEA
+    END_POPUP
+    POPUP "Инве&ртировать выделение (файлы/папки)"
+        MENUITEM "Файлы &и папки", $CF9
+        MENUITEM "Только &файлы\tShift+Num *", $CFA
+        MENUITEM "Только &папки", $CFB
+    END_POPUP
+    MENUITEM SEPARATOR
+    MENUITEM "Выделить всё с этим путём (поиск и режим без подкаталогов)", $219
+    MENUITEM "Снять всё выделение с этим путём", $21A
+    MENUITEM SEPARATOR
+    MENUITEM "С&охранить выделение\tShift+Num /", $212
+    MENUITEM "Со&хранить выделение в файл...", $7EF
+    MENUITEM "Восст&ановить выделение\tNum /", $211
+    MENUITEM "Загрузить выделение из &файла...", $7F0
+    MENUITEM "Загрузить выделение из &буфера", $7F1
+END_POPUP
+
+POPUP "&Навигация"
+    MENUITEM "&Назад\tAlt+влево", $23A
+    MENUITEM "&Вперёд\tAlt+вправо", $23B
+    MENUITEM "Назад с пропуском FTP", $23D
+    MENUITEM "Вперёд с пропуском FTP", $23E
+    MENUITEM SEPARATOR
+    MENUITEM "Поместить курсор в левую панель", $FA1
+    MENUITEM "Поместить курсор в правую панель", $FA2
+    MENUITEM "Поместить фокус на панель инструментов\tAlt+Shift+F11, Win+Backspace, ", $FA4
+    MENUITEM SEPARATOR
+    MENUITEM "&Открыть каталог/архив под курсором\tCtrl+PgDn", $7D3
+    MENUITEM "Переход в &родительский каталог\tCtrl+PgUp, Backspace", $7D2
+    MENUITEM "Переход в &корневой каталог\tCtrl+\, Ctrl+Home", $7D1
+    MENUITEM "&История каталогов\tAlt+Up", $23C
+    MENUITEM "Из&бранные каталоги\tAlt+Down, Ctrl+D", $20E
+    MENUITEM "&Дерево каталогов...\tAlt+F10", $1F4
+    MENUITEM SEPARATOR
+    MENUITEM "Открыть каталог/архив в л&евой панели\tCtrl+Left", $7E8
+    MENUITEM "Открыть каталог/архив в пр&авой панели\tCtrl+Right", $7E9
+    MENUITEM "Поменять местами панели (ак&тивные вкладки)\tCtrl+U", $213
+    MENUITEM "Поменять местами панели (в&се вкладки)\tCtrl+Shift+U", $217
+    MENUITEM "Получатель &= Источнику", $214
+    MENUITEM SEPARATOR
+    MENUITEM "Перейти к следующему выделенному файлу", $805
+    MENUITEM "Перейти к предыдущему выделенному файлу", $806
+    MENUITEM SEPARATOR
+    POPUP "Другие команды"
+        MENUITEM "И&зменить путь над списком файлов", $B60
+        MENUITEM "Поместить курсор на первый &файл в списке", $802
+        MENUITEM SEPARATOR
+        MENUITEM "Переход к след&ующему диску (C–>D)", $803
+        MENUITEM "Переход к пред&ыдущему диску (C<–D)", $804
+        MENUITEM SEPARATOR
+        MENUITEM "Переход в корен&ь заблокированной вкладки", $BC3
+        MENUITEM "Поместить курсор в ко&мандную строку", $FA3
+        MENUITEM "Предыду&щая командная строка\tCtrl+E", $7D6
+        MENUITEM "Следу&ющая командная строка", $7D5
+    END_POPUP
+    POPUP "Вкладки"
+        MENUITEM "Открыть новую вкладку\tCtrl+T", $BB9
+        MENUITEM "Открыть вкладку в фоне\tCtrl+Shift+T", $BBA
+        MENUITEM "Открыть папку под курсором в новой вкладке\tCtrl+вверх", $BBB
+        MENUITEM "Открыть папку под курсором в другой панели\tCtrl+Shift+вверх", $BBC
+        MENUITEM "Переключиться на следующую вкладку\tCtrl+Tab", $BBD
+        MENUITEM "Переключиться на предыдущую вкладку\tCtrl+Shift+Tab", $BBE
+        MENUITEM "Закрыть вкладку\tCtrl+W", $BBF
+        MENUITEM "Закрыть все вкладки\tCtrl+Shift+W", $BC0
+        MENUITEM "Показать меню вкладки", $BC1
+        MENUITEM "Заблокировать/Разблокировать вкладку", $BC2
+        MENUITEM "То же, но с возможностью смены каталога", $BC4
+        END_POPUP
+END_POPUP
+
+POPUP "Ви&д"
+    POPUP "Интерфейс"
+        MENUITEM "Панель инстр&ументов: вкл/выкл", $B55
+        MENUITEM "Кнопки диско&в: вкл/выкл", $B56
+        MENUITEM "Панели выбора дисков: &две/одна", $B57
+        MENUITEM "Окн&о выбора дисков: вкл/выкл", $B5A
+        MENUITEM "Использов&ать вкладки папок: вкл/выкл", $B64
+        MENUITEM "Кнопки и&стории и избранных каталогов: вкл/выкл", $B67
+        MENUITEM "Цепочки навигации: вкл/выкл", $B6E
+        MENUITEM "Имя текущего ка&талога: вкл/выкл", $B5B
+        MENUITEM "&Заголовки табуляторов: вкл/выкл", $B5C
+        MENUITEM "Строка состоя&ния: вкл/выкл", $B5D
+        MENUITEM "&Командная строка: вкл/выкл", $B5E
+        MENUITEM "&Функциональные кнопки: вкл/выкл", $B5F
+        MENUITEM SEPARATOR
+        MENUITEM "Кнопки дисков: плоские/о&бычные", $B58
+        MENUITEM "Интерфейс основного окна: &плоский/обычный", $B59
+        MENUITEM "Те&ма Windows XP для фона: вкл/выкл", $B6B
+        MENUITEM "Показывать овер&лейные значки: вкл/выкл", $B65
+        MENUITEM "Показывать имена &8.3 в нижнем регистре: вкл/выкл", $7DD
+        MENUITEM SEPARATOR
+        MENUITEM "Показывать длинные &имена: вкл/выкл", $7DA
+        MENUITEM "Сортировать каталоги: по им&ени/как файлы", $7DC
+        MENUITEM "Показывать скрытые/системные фа&йлы: вкл/выкл", $7DB
+    END_POPUP
+    MENUITEM SEPARATOR
+    MENUITEM "&Краткий\tCtrl+F1", $12D
+    MENUITEM "&Подробный\tCtrl+F2", $12E
+    MENUITEM "Просмотр &эскизов\tCtrl+Shift+F1", $10D
+    MENUITEM "Коммента&рии\tCtrl+Shift+F2", $12C
+    MENUITEM "По&льзовательский набор колонок\t", $10E
+    MENUITEM "Следу&ющий набор колонок\tAlt+Z", $157D
+    MENUITEM "Предыд&ущий набор колонок\tAlt+X", $157E
+    MENUITEM "Настроить теку&щий набор колонок", $B68
+    MENUITEM "&Дерево каталогов\tCtrl+F8", $12F
+    POPUP "Дерево в отдел&ьной панели"
+        MENUITEM "&0 (Нет)", $C80
+        MENUITEM "&1 (Одно для обеих панелей)", $C81
+        MENUITEM "&2 (Два, по одному на панель)", $C82
+        MENUITEM SEPARATOR
+        MENUITEM "&Переключить режим дерева\tCtrl+Shift+F8", $C83
+        MENUITEM "&Одно дерево: вкл/выкл", $C84
+        MENUITEM "&Два дерева: вкл/выкл", $C85
+    END_POPUP
+    MENUITEM SEPARATOR
+    MENUITEM "Вс&е файлы\tCtrl+F10", $138
+    MENUITEM "Програ&ммы\tCtrl+F11", $137
+    MENUITEM "*.*", $139
+    MENUITEM "&Фильтр...\tCtrl+F12", $13A
+    MENUITEM "Только выделенные файл&ы", $7E7
+    MENUITEM "Показать все фа&йлы без подкаталогов\tCtrl+B", $7EA
+    MENUITEM "Использовать список исклю&чений файловых имён", $B6A
+    MENUITEM SEPARATOR
+    MENUITEM "П&анели одна над другой", $131
+    MENUITEM "Разделение окна по &центру", $38D
+    MENUITEM "Показать размеры все&х папок\tAlt+Shift+Enter", $7DE
+    MENUITEM SEPARATOR
+    MENUITEM "Развернуть окно Total Commander\tF1", $7DF
+    MENUITEM "Восстановить окно Total Commander\tShift+F1", $7E0
+    MENUITEM "Свернуть окно Total Commander\tShift+Esc", $7D0
+    MENUITEM SEPARATOR
+    MENUITEM "Обновить содер&жимое панели\tCtrl+R (*)", $21C
+    MENUITEM "Обновить выбранные &эскизы", $B66
+    MENUITEM "Показать подсказку для файла", $B62
+    MENUITEM "Активная: активизировать цепочки навигации", $14C
+END_POPUP
+
+POPUP "Сортировка"
+    MENUITEM "По &имени\tCtrl+F3", $141
+    MENUITEM "По &типу\tCtrl+F4", $142
+    MENUITEM "По ра&змеру\tCtrl+F6", $143
+    MENUITEM "По дате/&времени\tCtrl+F5", $144
+    MENUITEM "В &обратном порядке", $14A
+    MENUITEM "Без &сортировки\tCtrl+F7", $145
+    MENUITEM SEPARATOR
+    MENUITEM "Вывести диалог быстрого поиска/фильтрации\tCtrl+S", $B63
+END_POPUP
+
+POPUP "&Соединения"
+    MENUITEM "Под&ключить сетевой диск...", $200
+    MENUITEM "&Отключить сетевой диск...", $201
+    MENUITEM "Сдел&ать текущий каталог общим...", $202
+    MENUITEM "&Закрыть общий доступ к каталогу...", $203
+    MENUITEM "Показать ресурсы ад&министратора", $89C
+    MENUITEM SEPARATOR
+    MENUITEM "&Соединиться с FTP-сервером...\tCtrl+F", $226
+    MENUITEM "&Новое FTP-соединение...\tCtrl+N", $227
+    MENUITEM "&Разорвать FTP-соединение\tCtrl+Shift+F", $228
+    MENUITEM "&Прервать текущую команду", $22A
+    MENUITEM "&Возобновить прерванную загрузку...", $22B
+    MENUITEM SEPARATOR
+    MENUITEM "&Добавить в список загрузки...", $22D
+    MENUITEM "Диспетчер &фоновой пересылки...", $22F
+    MENUITEM "За&грузка по списку...", $22E
+    MENUITEM SEPARATOR
+    MENUITEM "Показ&ывать скрытые файлы на сервере", $229
+    MENUITEM "Выбрать ре&жим передачи (Авто/Двоичный/Текст)\tCtrl+Shift+M", $22C
+    MENUITEM SEPARATOR
+    MENUITEM "&Установить соединение через LPT-порт...", $8FC
+    MENUITEM "Ус&тановить LPT драйвер (NT)", $8FD
+    MENUITEM "Уда&лить LPT драйвер (NT)", $8FE
+END_POPUP
+
+POPUP "&Конфигурация"
+    MENUITEM "&Настройка...\tAlt+O, Alt+P", $1EA
+    MENUITEM "Панель &инструментов...", $1F2
+    POPUP "&Пункты настройки"
+        MENUITEM "&Вид", $1EA
+        MENUITEM "&Экран\tAlt+O", $1E6
+        MENUITEM "&Шрифты", $1EC
+        MENUITEM "Наст&ройка: Значки", $1DD
+        MENUITEM "&Цвет", $1EE
+        MENUITEM "&Табуляторы", $1F1
+        MENUITEM "Вкладки &каталогов", $1E8
+        MENUITEM "&Наборы колонок", $1E3
+        MENUITEM "&Язык", $1F3
+        MENUITEM SEPARATOR
+        MENUITEM "&Операции", $204
+        MENUITEM "&Правка/Просмотр", $1F0
+        MENUITEM "Операции с &файлами", $1E7
+        MENUITEM "Настройка: Автообновление", $1DE
+        MENUITEM "Настройка: Быстрый поиск", $1DF
+        MENUITEM "&FTP", $1E9
+        MENUITEM "Пла&гины", $1E4
+        MENUITEM "Э&скизы", $1E2
+        MENUITEM "Настройка: Файл отчёта", $1E1
+        MENUITEM "Настройка: Список исключений", $1E0
+        MENUITEM SEPARATOR
+        MENUITEM "&Архиваторы", $1EB
+        MENUITEM "Архиватор &ZIP", $1E5
+        MENUITEM SEPARATOR
+        MENUITEM "Ра&зное", $1EF
+    END_POPUP
+    MENUITEM SEPARATOR
+    MENUITEM "&Редактировать файлы конфигурации", $245
+    MENUITEM "Отк&лючить все плагины", $B61
+    MENUITEM SEPARATOR
+    MENUITEM "Сохранить историю каталогов", $246
+    MENUITEM "Запо&мнить позицию", $1ED
+    MENUITEM "Со&хранить настройки", $244
+END_POPUP
+
+STARTMENU
+
+HELP_BREAK
+
+POPUP "&Инструменты"
+    MENUITEM "Список ком&анд TC...", $B6C
+    MENUITEM "&Информация о системе", $1FA
+    MENUITEM SEPARATOR
+    MENUITEM "&Групповое переименование...\tCtrl+M", $960
+    MENUITEM "&Поиск файлов...\tAlt+F7", $1F5
+    MENUITEM "&Синхронизировать каталоги...", $7E4
+    MENUITEM "Сравнить файлы &по содержимому...", $7E6
+    MENUITEM "Сравнить файлы внутренним инструментом", $7F8
+    MENUITEM "Запустить с&еанс DOS\tCtrl+O", $1FF
+    MENUITEM "&Метка диска...", $1F9
+    MENUITEM SEPARATOR
+    MENUITEM "Показать контекстное меню внутренних ассоциаций", $B6F
+    MENUITEM "Меню внутренних ассоциаций для файла под курсором", $B70
+    MENUITEM "Настройка внутренних ассоциаций", $207
+    MENUITEM SEPARATOR
+    MENUITEM "Правка\tF4", $388
+    MENUITEM "&Быстрый просмотр\tCtrl+Q", $130
+    MENUITEM "Б&ыстрый просмотр с отключёнными плагинами", $132
+    MENUITEM SEPARATOR
+    MENUITEM "Копировать им&я файла в буфер\tCtrl+F9", $7E1
+    MENUITEM "Копировать по&лноe имя файла в буфер\tF9", $7E2
+    MENUITEM "Копировать UNC-п&уть и имя файла\tCtrl+Shift+F9", $7E5
+    MENUITEM "Копировать в буфер путь исто&чника", $7ED
+    MENUITEM "Копировать в буфер путь п&олучателя", $7EE
+    MENUITEM SEPARATOR
+    MENUITEM "Копировать содержимое всех колонок", $7F4
+    MENUITEM "Копировать все колонки (полные пути)", $7F5
+    MENUITEM "Копировать все колонки (UNC-пути)", $7F6
+    MENUITEM "Сохранить содержимое всех колонок в файл", $7F7
+    MENUITEM SEPARATOR
+    MENUITEM "Копи&ровать путь в командную строку\tCtrl+P", $7E3
+    MENUITEM "Очистит&ь командную строку\tCtrl+Y", $7D4
+    MENUITEM SEPARATOR
+    MENUITEM "И&зменение прав доступа (NTFS)...", $898
+    MENUITEM "Аудит фа&йлов (NTFS)...", $899
+    MENUITEM "Стать владель&цем (NTFS)", $89A
+    MENUITEM "Показать, кем открыт &файл по сети", $89B
+    MENUITEM SEPARATOR
+    MENUITEM "Слежение за каталогами: вкл/выкл", $B69
+    MENUITEM "x64: Перенаправление System32->SysWOW64: выкл/вкл", $B6D
+    POPUP "Системные &каталоги"
+        MENUITEM "&Рабочий стол", $849
+        MENUITEM "Мой &компьютер", $84A
+        MENUITEM "&Панель управления", $84B
+        MENUITEM "&Шрифты", $84C
+        MENUITEM "&Сетевое &окружение", $84D
+        MENUITEM "Прин&теры", $84E
+        MENUITEM "Kор&зина", $84F
+    END_POPUP
+    POPUP "Спра&вка"
+        MENUITEM "&Содержание\tF1 (*)", $262
+        MENUITEM "&Горячие клавиши", $26C
+        MENUITEM "О &регистрации", $276
+        MENUITEM "&Посетить сайт программы", $280
+        MENUITEM SEPARATOR
+        MENUITEM "&О Total Commander...", $2B2
+    END_POPUP
+END_POPUP
