@@ -122,6 +122,7 @@ POPUP "C&onfiguration"
   MENUITEM "&Button Bar...", cm_ButtonConfig
   MENUITEM "Button Bar &2 (Vertical)...", 583
   MENUITEM "&Change Settings Files Directly...", 581
+  MENUITEM "&Dark<->Normal", 2950
   MENUITEM "&Save Position", cm_configSavepos
   MENUITEM "Sa&ve Settings", 580
 END_POPUP
@@ -134,7 +135,7 @@ POPUP "&Help"
   MENUITEM "&Index\tF1", cm_HelpIndex
   MENUITEM "&Keyboard", cm_keyboard
   MENUITEM "&Registration Info", cm_register
-  MENUITEM "&Visit Totalcmd's Web Site", 640
+  MENUITEM "&Visit Totalcmd's Website", 640
   MENUITEM "&Check for updates now", 650
   MENUITEM SEPARATOR
   MENUITEM "&About Total Commander...", cm_About
